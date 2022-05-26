@@ -1,0 +1,222 @@
+/* ! CSS Reset Section from joshwcomeau.com/css/custom-css-reset */
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ! Color Palette */
+:root {
+  --teal: #0ba39cff;
+  --eerie-black: #252525ff;
+}
+
+/* !Page Styling */
+/* %Elements */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+footer {
+  width: 100vw;
+  background-color: var(--eerie-black);
+  padding: 2em;
+}
+
+footer > p {
+  color: white;
+  text-align: center;
+}
+h2 {
+  font-family: 'Poller One';
+  text-align: center;
+  padding-top: 15px;
+}
+header {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  height: 400px;
+  width: 100%;
+  background-image: url('http://drive.google.com/uc?export=view&id=18G2VgCLGAUEpRh1mpBtS4YyTXzcu3WHG');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section {
+  width: 85%;
+}
+/* %IDs */
+
+/* %Classes */
+.icons-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+}
+.image-links {
+  width: 100%;
+  border: solid 2px var(--eerie-black);
+}
+.logo {
+  width: 80%;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar-links {
+  display: none;
+  width: 100%;
+}
+
+.navbar-links ul {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.navbar-link-active {
+  background-color: var(--eerie-black) !important;
+}
+
+.navbar-links li {
+  text-align: center;
+  list-style: none;
+  background-color: var(--teal);
+  border: solid 1px whitesmoke;
+  padding: 0.8em;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links.active {
+  display: flex;
+}
+
+.page-container {
+  width: 100vw;
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.toggle-button {
+  background-color: var(--teal);
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.bar {
+  height: 2px;
+  width: 70%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/*! Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-self: flex-start;
+  }
+
+  .navbar-links {
+    display: flex;
+  }
+
+  .navbar-links ul {
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+
+  .navbar-links li a {
+    color: var(--gainsboro);
+    font-size: 1.3rem;
+    padding: 3.2rem rem;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-links li a:hover {
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    color: var(--goldenrod);
+  }
+
+  .toggle-button {
+    display: none;
+  }
+}
