@@ -9,6 +9,7 @@
 :root {
   --teal: #0ba39cff;
   --eerie-black: #252525ff;
+  --granite-gray: #898989ff;
 }
 
 /* !Page Styling */
@@ -70,6 +71,7 @@ html {
 main {
   height: 400px;
   width: 100%;
+  max-width: 100%;
   background-image: url('../images/main-image.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -110,7 +112,7 @@ section {
 
 .image-links {
   width: 100%;
-  border: solid 2px var(--eerie-black);
+  border: solid 2.5px var(--granite-gray);
 }
 
 .logo {
@@ -210,6 +212,7 @@ section {
   h2 {
     font-size: 18px;
   }
+
   footer {
     width: 100vw;
   }
@@ -225,7 +228,7 @@ section {
   }
 
   main {
-    height: 40%;
+    height: 40vh;
     display: grid;
     grid-template-columns: 45% 55%;
     align-items: center;
@@ -236,12 +239,23 @@ section {
   }
 
   section {
+    width: 40%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
+
+  .image-anchor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .image-links {
+    display: block;
     width: 80%;
+    max-width: 300px;
   }
 
   .main-content {
@@ -301,10 +315,10 @@ section {
   }
 
   .section-container {
-    height: 20%;
+    width: 100vw;
+    height: 30%;
     flex-direction: row;
-    gap: 30px;
-    padding: 10px 40px;
+    justify-content: space-around;
   }
 
   .toggle-button {
@@ -338,12 +352,27 @@ section {
   }
 
   main {
-    height: 500px;
+    /* height: 500px; */
   }
+
   section {
-    padding: 3%;
+    width: auto;
+  }
+
+  .image-anchor {
+    width: 100%;
+  }
+
+  .image-links {
+    width: 100%;
   }
   .logo {
     width: 70%;
+  }
+
+  .section-container {
+    width: 80vw;
+    justify-content: center;
+    gap: 2em;
   }
 }

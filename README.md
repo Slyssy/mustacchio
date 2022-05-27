@@ -11,3 +11,6 @@ Photo 135289613 © Photosvit | Dreamstime.com
 
 The Nerd Image
 Photo 176254668 © Amazingmikael | Dreamstime.com
+
+Wide Main Photo
+Photo 118227777 / Bearded © Carafoto | Dreamstime.com
