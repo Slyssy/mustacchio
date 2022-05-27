@@ -23,15 +23,13 @@ button {
   background-color: var(--teal);
   padding: 0.4em;
   border: none;
-  margin-left: 0.5em;
-  width: 28%;
+  padding: 1em;
   font-size: 14px;
   font-weight: 600;
 }
 
 footer {
   width: 100%;
-  max-width: 100%;
   background-color: var(--eerie-black);
   padding: 2em;
 }
@@ -50,9 +48,9 @@ h3 {
   font-family: 'Poller One';
   font-size: 14px;
   background-color: white;
-  width: 70%;
-  margin: 3em 0 0 1em;
+  width: fit-content;
   padding: 0.5em;
+  margin-bottom: 1em;
 }
 
 header {
@@ -72,7 +70,7 @@ html {
 main {
   height: 400px;
   width: 100%;
-  background-image: url('http://drive.google.com/uc?export=view&id=18G2VgCLGAUEpRh1mpBtS4YyTXzcu3WHG');
+  background-image: url('../images/main-image.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -83,9 +81,9 @@ main {
 
 main p {
   background-color: var(--eerie-black);
+  font-size: 14px;
   color: white;
   width: 92%;
-  margin: 0 1em;
   padding: 0.5em;
 }
 section {
@@ -109,13 +107,26 @@ section {
   gap: 1em;
   align-items: center;
 }
+
 .image-links {
   width: 100%;
   border: solid 2px var(--eerie-black);
 }
+
 .logo {
   width: 80%;
 }
+
+.main-content {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 0.5em;
+  margin-top: 3em;
+}
+
 .navbar {
   width: 100%;
   display: flex;
@@ -192,22 +203,53 @@ section {
 
 /*! Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  button {
+    margin-left: 0;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
   footer {
     width: 100vw;
   }
 
   h3 {
-    width: 42%;
+    width: fit-content;
+    font-size: 18px;
   }
+
   header {
     margin-top: 32px;
     height: 200px;
   }
 
-  main p {
-    width: 42%;
+  main {
+    height: 40%;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: center;
   }
 
+  main p {
+    width: fit-content;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-links {
+    width: 80%;
+  }
+
+  .main-content {
+    height: 80%;
+    align-items: flex-start;
+    grid-column: 2;
+    margin-top: 1em;
+  }
   .navbar {
     display: flex;
     justify-content: space-around;
@@ -253,11 +295,18 @@ section {
     color: var(--teal);
   }
 
-  .section-container {
-    flex-direction: row;
-    gap: 20px;
-    padding: 10px;
+  .page-container {
+    height: 100vh;
+    justify-content: space-between;
   }
+
+  .section-container {
+    height: 20%;
+    flex-direction: row;
+    gap: 30px;
+    padding: 10px 40px;
+  }
+
   .toggle-button {
     display: none;
   }
@@ -267,16 +316,11 @@ section {
   header {
     height: 300px;
   }
-  button {
+  /* button {
     grid-column: 2;
     margin-left: 0;
     font-size: 22px;
     font-weight: 400;
-  }
-  main {
-    display: grid;
-    grid-template-columns: 45% 55%;
-    padding-bottom: 35%;
   }
 
   main p {
@@ -284,7 +328,7 @@ section {
     margin-left: 0;
     font-size: 22px;
     width: fit-content;
-  }
+  } */
 
   h3 {
     grid-column: 2;
@@ -293,14 +337,13 @@ section {
     width: fit-content;
   }
 
+  main {
+    height: 500px;
+  }
   section {
     padding: 3%;
   }
   .logo {
     width: 70%;
-  }
-
-  .page-container {
-    height: 100vh;
   }
 }
