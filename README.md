@@ -6,5 +6,8 @@ Photo 173004246 © Niccolo Pontigia | Dreamstime.com
 The Father Image
 Photo 20675508 © Yurikr | Dreamstime.com
 
+The Actor Image
+Photo 135289613 © Photosvit | Dreamstime.com
+
 The Nerd Image
 Photo 176254668 © Amazingmikael | Dreamstime.com

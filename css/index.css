@@ -1,52 +1,8 @@
 /* ! CSS Reset Section from joshwcomeau.com/css/custom-css-reset */
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 * {
   margin: 0;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-#root,
-#__next {
-  isolation: isolate;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ! Color Palette */
@@ -59,20 +15,23 @@ h6 {
 /* %Elements */
 body {
   font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  margin: 0;
 }
 
 button {
   background-color: var(--teal);
-  padding: 0.3em;
+  padding: 0.4em;
   border: none;
   margin-left: 0.5em;
-  width: 30%;
+  width: 28%;
   font-size: 14px;
   font-weight: 600;
 }
 
 footer {
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
   background-color: var(--eerie-black);
   padding: 2em;
 }
@@ -91,19 +50,25 @@ h3 {
   font-family: 'Poller One';
   font-size: 14px;
   background-color: white;
-  width: 71%;
-  margin: 3em 0 0 0.5em;
+  width: 70%;
+  margin: 3em 0 0 1em;
   padding: 0.5em;
 }
 
 header {
+  margin-top: 16px;
   height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 main {
   height: 400px;
   width: 100%;
@@ -116,19 +81,27 @@ main {
   gap: 1em;
 }
 
-main > p {
+main p {
   background-color: var(--eerie-black);
   color: white;
   width: 92%;
-  margin: 0 auto;
+  margin: 0 1em;
   padding: 0.5em;
 }
 section {
-  width: 85%;
+  width: 70%;
+  align-self: center;
 }
 /* %IDs */
 
 /* %Classes */
+.bar {
+  height: 3px;
+  width: 60%;
+  background-color: white;
+  border-radius: 10px;
+}
+
 .icons-container {
   width: 100%;
   display: flex;
@@ -185,38 +158,56 @@ section {
 }
 
 .page-container {
-  width: 100vw;
-  margin: 32px 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 20px;
   align-items: center;
-  gap: 30px;
 }
 
 .read-more {
   color: white;
   text-decoration: none;
 }
+
+.section-container {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .toggle-button {
   background-color: var(--teal);
   padding: 0.5em;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 4px;
   align-items: center;
   width: 30px;
   height: 30px;
-}
-
-.bar {
-  height: 2px;
-  width: 70%;
-  background-color: white;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 
 /*! Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  footer {
+    width: 100vw;
+  }
+
+  h3 {
+    width: 42%;
+  }
+  header {
+    margin-top: 32px;
+    height: 200px;
+  }
+
+  main p {
+    width: 42%;
+  }
+
   .navbar {
     display: flex;
     justify-content: space-around;
@@ -224,8 +215,19 @@ section {
     justify-self: flex-start;
   }
 
+  .navbar-link-active {
+    color: var(--teal);
+    background-color: transparent !important;
+  }
+
   .navbar-links {
     display: flex;
+  }
+
+  .navbar-links li {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
   }
 
   .navbar-links ul {
@@ -238,7 +240,7 @@ section {
 
   .navbar-links li a {
     color: var(--gainsboro);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     padding: 3.2rem rem;
     display: block;
     text-align: center;
@@ -247,11 +249,58 @@ section {
 
   .navbar-links li a:hover {
     transition: all 0.3s ease;
-    font-size: 1.5rem;
-    color: var(--goldenrod);
+    font-size: 1.3rem;
+    color: var(--teal);
   }
 
+  .section-container {
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+  }
   .toggle-button {
     display: none;
+  }
+}
+/*! Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  header {
+    height: 300px;
+  }
+  button {
+    grid-column: 2;
+    margin-left: 0;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    padding-bottom: 35%;
+  }
+
+  main p {
+    grid-column: 2;
+    margin-left: 0;
+    font-size: 22px;
+    width: fit-content;
+  }
+
+  h3 {
+    grid-column: 2;
+    margin-left: 0;
+    font-size: 22px;
+    width: fit-content;
+  }
+
+  section {
+    padding: 3%;
+  }
+  .logo {
+    width: 70%;
+  }
+
+  .page-container {
+    height: 100vh;
   }
 }
