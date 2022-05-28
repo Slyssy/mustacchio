@@ -31,6 +31,7 @@ footer {
   width: 100%;
   background-color: var(--eerie-black);
   padding: 2em;
+  margin-top: 3em;
 }
 
 footer > p {
@@ -95,6 +96,7 @@ p {
   flex-direction: column;
   gap: 1.5em;
 }
+
 .logo {
   width: 80%;
 }
@@ -162,4 +164,96 @@ p {
   width: 30px;
   height: 30px;
   border-radius: 3px;
+}
+
+/*! Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  h1 {
+    width: 89%;
+    margin: 0 auto;
+    font-size: 28px;
+  }
+
+  header {
+    height: 200px;
+  }
+  footer {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-self: flex-start;
+  }
+
+  .navbar-link-active {
+    color: var(--teal);
+    background-color: transparent !important;
+  }
+
+  .navbar-links {
+    display: flex;
+  }
+
+  .navbar-links li {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    position: relative;
+  }
+
+  .navbar-links ul {
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+
+  .navbar-links li a {
+    color: var(--gainsboro);
+    font-size: 1.1rem;
+    padding: 3.2rem rem;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-links li:after {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 4px;
+    background-color: var(--teal);
+    left: 50%;
+    bottom: -10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-links li:hover:after {
+    width: 100%;
+    left: 0;
+  }
+  .navbar-links li a:hover {
+    transition: all 0.3s ease;
+    font-size: 1.3rem;
+    color: var(--teal);
+  }
+
+  .page-container {
+    width: 80%;
+  }
+
+  .toggle-button {
+    display: none;
+  }
 }
