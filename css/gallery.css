@@ -20,6 +20,26 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-family: 'Poller One';
+  font-size: 20px;
+  text-align: center;
+  background-color: var(--eerie-black);
+  color: white;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+}
+
+header {
+  margin-top: 16px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
 footer {
   width: 100%;
   background-color: var(--eerie-black);
@@ -67,12 +87,19 @@ main {
   height: 160px;
   object-fit: cover;
   filter: grayscale();
-  border: 2px solid var(--eerie-black);
+  border: 2px solid var(--granite-gray);
   transition: filter 0.4s ease-in-out;
 }
 
 .image-links:hover {
   filter: none;
+}
+
+.intro {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
 }
 
 .navbar {
@@ -142,6 +169,105 @@ main {
 
 /*! Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  h1 {
+    width: 89%;
+    margin: 0 auto;
+    font-size: 28px;
+  }
+
+  header {
+    height: 200px;
+  }
+
+  footer {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    justify-items: center;
+    align-items: center;
+    row-gap: 1em;
+  }
+
+  .image-links {
+    width: 200px;
+    height: 200px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-self: flex-start;
+  }
+
+  .navbar-link-active {
+    color: var(--teal);
+    background-color: transparent !important;
+  }
+
+  .navbar-links {
+    display: flex;
+  }
+
+  .navbar-links li {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    position: relative;
+  }
+
+  .navbar-links ul {
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+
+  .navbar-links li a {
+    color: var(--gainsboro);
+    font-size: 1.1rem;
+    padding: 3.2rem rem;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-links li:after {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 4px;
+    background-color: var(--teal);
+    left: 50%;
+    bottom: -10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-links li:hover:after {
+    width: 100%;
+    left: 0;
+  }
+  .navbar-links li a:hover {
+    transition: all 0.3s ease;
+    font-size: 1.3rem;
+    color: var(--teal);
+  }
+
+  .page-container {
+    width: 80%;
+  }
+
+  .toggle-button {
+    display: none;
+  }
 }
 
 /*! Large devices (laptops/desktops, 992px and up) */

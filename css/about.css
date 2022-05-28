@@ -177,6 +177,7 @@ p {
   header {
     height: 200px;
   }
+
   footer {
     width: 100vw;
     display: grid;
