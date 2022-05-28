@@ -1,0 +1,165 @@
+/* ! CSS Reset Section from joshwcomeau.com/css/custom-css-reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ! Color Palette */
+:root {
+  --teal: #0ba39cff;
+  --eerie-black: #252525ff;
+  --granite-gray: #898989ff;
+}
+
+/* !Page Styling */
+/* %Elements */
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  margin: 0;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--eerie-black);
+  padding: 2em;
+}
+
+footer > p {
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Poller One';
+  font-size: 20px;
+  text-align: center;
+  background-color: var(--eerie-black);
+  color: white;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+}
+
+header {
+  margin-top: 16px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: 0.9em;
+  line-height: 1.9em;
+  text-align: center;
+}
+/* %Classes */
+.about-image {
+  width: 100%;
+  border: 2px solid var(--eerie-black);
+  filter: grayscale();
+}
+.bar {
+  height: 3px;
+  width: 60%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.icons-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+}
+
+.intro {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.logo {
+  width: 80%;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar-links {
+  display: none;
+  width: 100%;
+}
+
+.navbar-links ul {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.navbar-link-active {
+  background-color: var(--eerie-black) !important;
+}
+
+.navbar-links li {
+  text-align: center;
+  list-style: none;
+  background-color: var(--teal);
+  border: solid 1px whitesmoke;
+  padding: 0.8em;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links.active {
+  display: flex;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 1975px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  background-color: white;
+}
+
+.toggle-button {
+  background-color: var(--teal);
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+}
