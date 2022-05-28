@@ -120,6 +120,7 @@ section {
 .image-links:hover {
   filter: none;
 }
+
 .logo {
   width: 80%;
 }
@@ -262,7 +263,7 @@ section {
 
   .image-links {
     display: block;
-    width: 80%;
+    width: 100%;
     max-width: 300px;
   }
 
@@ -343,6 +344,7 @@ section {
     height: 30%;
     flex-direction: row;
     justify-content: space-around;
+    gap: 1vw;
   }
 
   .toggle-button {
