@@ -30,6 +30,20 @@ button {
   color: white;
   margin-bottom: 1em;
   box-shadow: 0 100px 10px rbga(255, 255, 255, 0.8);
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  color: var(--teal);
+  padding: 1.2em;
+}
+
+button:active {
+  padding: 1em;
+  background-color: rgba(11, 163, 155, 0.501);
+  color: white;
 }
 
 h1 {
