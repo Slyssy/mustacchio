@@ -14,7 +14,7 @@ toggleButton.addEventListener('click', (e) => {
 
 //% Function to select Image for Modal
 function selectModalImage(num) {
-  const thumb = `../images/gallery/gallery-image-${num}.jpg`;
+  const thumb = `./images/gallery/gallery-image-${num}.jpg`;
   modalImage.src = thumb;
 }
 
