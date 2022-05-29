@@ -176,7 +176,7 @@ main {
 .modal-container.show {
   pointer-events: auto;
   opacity: 1;
-  background: rgba(211, 211, 211, 0.487);
+  background: rgba(257, 257, 257, 0.7);
   backdrop-filter: saturate(200%) blur(10px);
   animation: fadein 0.5s;
 }
