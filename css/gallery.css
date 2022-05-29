@@ -156,6 +156,7 @@ main {
   opacity: 0;
   pointer-events: none;
   z-index: 2;
+  transition: all ease-out 0.5s;
 }
 
 .modal-container.show {
@@ -163,7 +164,16 @@ main {
   opacity: 1;
   background: rgba(247, 247, 247, 0.6);
   backdrop-filter: saturate(200%) blur(10px);
-  transition: all ease-in-out 0.4s;
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modal-image {
