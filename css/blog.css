@@ -14,10 +14,52 @@
 
 /* !Page Styling */
 /* %Elements */
+article {
+  width: 90%;
+  height: 600px;
+  border: 2px solid var(--eerie-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article p {
+  padding: 0 1em;
+  text-align: center;
+  line-height: 1.6em;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   width: 100vw;
   margin: 0;
+}
+
+button {
+  background-color: var(--teal);
+  padding: 0.4em;
+  border: none;
+  padding: 1em;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1em;
+  box-shadow: 0 100px 10px rbga(255, 255, 255, 0.8);
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: white;
+  color: var(--teal);
+  padding: 1.2em;
+}
+
+button:active {
+  padding: 1em;
+  background-color: rgba(11, 163, 155, 0.501);
+  color: white;
 }
 
 footer {
@@ -33,13 +75,21 @@ footer > p {
 }
 
 h1 {
+  width: 90%;
   font-family: 'Poller One', cursive;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   background-color: var(--eerie-black);
   color: white;
   padding: 0.5em 1em;
   text-transform: uppercase;
+}
+
+h2 {
+  text-transform: uppercase;
+  padding: 0 3em;
+  text-align: center;
+  font-weight: bolder;
 }
 
 header {
@@ -63,6 +113,21 @@ html {
   width: 60%;
   background-color: white;
   border-radius: 10px;
+}
+
+.blog-image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale();
+}
+
+.blog-text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .icons-container {
@@ -144,6 +209,10 @@ html {
 
 /*! Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  article {
+    height: auto;
+  }
+
   header {
     height: 200px;
   }
@@ -159,6 +228,13 @@ html {
     font-size: 1.1em;
   }
 
+  .blog-image {
+    height: 350px;
+  }
+
+  .blog-text {
+    height: 250px;
+  }
   .navbar {
     display: flex;
     justify-content: space-around;
@@ -228,5 +304,15 @@ html {
     display: none;
   }
 }
+/*! Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  article {
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 30%; */
+  }
 
+  .blog-image {
+    width: 40%;
+  }
 }

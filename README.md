@@ -58,3 +58,12 @@ Gallery Image 12
 Photo 118864118 © Photosvit | Dreamstime.com
 
 <a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by Pixel perfect - Flaticon</a>
+
+Blog 1 Image
+Photo 99030452 / Barbershop © Nejron | Dreamstime.com
+
+Blog 2 Image
+Photo 137433518 / Barbershop © Volodymyr Tverdokhlib | Dreamstime.com
+
+Blog 3 Image
+Photo 16431533 © Ramzi Hachicho | Dreamstime.com
