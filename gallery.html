@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Mustacchio</title>
+    <link rel="stylesheet" href="./css/gallery.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./scripts/gallery.js" defer></script>
+  </head>
+  <body>
+    <div class="page-container">
+      <header>
+        <img
+          src="./images/mustacchio_logo.png"
+          alt="Handle Bar Mustache
+          Mustacchio Logo"
+          class="logo"
+        />
+        <nav class="navbar">
+          <div class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <div class="navbar-links">
+            <ul>
+              <li>
+                <a href="https://slyssy.github.io/mustacchio/">HOME</a>
+              </li>
+              <li class="navbar-link-active">
+                <a href="./about.html">ABOUT</a>
+              </li>
+              <li><a href="./gallery.html">GALLERY</a></li>
+              <li><a href="./blog.html">BLOG</a></li>
+              <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <section class="intro">
+        <h1 class="title">Gallery</h1>
+        <div class="about-image-container"></div>
+      </section>
+      <main>
+        <div class="gallery-slot">
+          <div class="image-anchor" onclick="selectModalImage(1)">
+            <img
+              src="./images/gallery/gallery-image-1.jpg"
+              alt=""
+              class="image-links"
+            />
+          </div>
+        </div>
+        <div class="gallery-slot">
+          <div class="image-anchor" onclick="selectModalImage(2)">
+            <img
+              src="./images/gallery/gallery-image-2.jpg"
+              alt=""
+              class="image-links"
+            />
+          </div>
+        </div>
+        <div class="gallery-slot">
+          <div class="image-anchor" onclick="selectModalImage(3)">
+            <img
+              src="./images/gallery/gallery-image-3.jpg"
+              alt=""
+              class="image-links"
+            />
+          </div>
+        </div>
+        <div class="gallery-slot">
+          <div class="image-anchor" onclick="selectModalImage(4)">
+            <img
+              src="./images/gallery/gallery-image-4.jpg"
+              alt=""
+              class="image-links"
+            />
+          </div>
+        </div>
+        <div class="gallery-slot">
+          <div class="image-anchor" onclick="selectModalImage(5)">
+            <img
+              src="./images/gallery/gallery-image-5.jpg"
+              alt=""
+              class="image-links"
+            />
+          </div>
+        </div>
+        <div class="gallery-slot">
+          <div class="image-anchor" onclick="selectModalImage(6)">
+            <img
+              src="./images/gallery/gallery-image-6.jpg"
+              alt=""
+              class="image-links"
+            />
+          </div>
+        </div>
+        <div class="gallery-slot">
+          <div class="image-anchor" onclick="selectModalImage(7)">
+            <img
+              src="./images/gallery/gallery-image-7.jpg"
+              alt=""
+              class="image-links"
+            />
+          </div>
+        </div>
+        <div class="gallery-slot">
+          <div class="image-anchor" onclick="selectModalImage(8)">
+            <img
+              src="./images/gallery/gallery-image-8.jpg"
+              alt=""
+              class="image-links"
+            />
+          </div>
+        </div>
+        <div class="gallery-slot">
+          <div class="image-anchor" onclick="selectModalImage(9)">
+            <img
+              src="./images/gallery/gallery-image-9.jpg"
+              alt=""
+              class="image-links"
+            />
+          </div>
+        </div>
+        <div class="gallery-slot">
+          <div class="image-anchor" onclick="selectModalImage(10)">
+            <img
+              src="./images/gallery/gallery-image-10.jpg"
+              alt=""
+              class="image-links"
+            />
+          </div>
+        </div>
+        <div class="gallery-slot">
+          <div class="image-anchor" onclick="selectModalImage(11)">
+            <img
+              src="./images/gallery/gallery-image-11.jpg"
+              alt=""
+              class="image-links"
+            />
+          </div>
+        </div>
+        <div class="gallery-slot">
+          <div class="image-anchor" onclick="selectModalImage(12)">
+            <img
+              src="./images/gallery/gallery-image-12.jpg"
+              alt=""
+              class="image-links"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <p>&#169; 2022 by Stevio. All rights reserved.</p>
+      <div class="icons-container">
+        <div class="icon">
+          <img src="./images/twitter-icon-small.jpg" alt="Twitter Icon" />
+        </div>
+        <div class="icon">
+          <img src="./images/facebook-icon-small.jpg" alt="Facebook Icon" />
+        </div>
+        <div class="icon">
+          <img src="./images/google-icon-small.jpg" alt="Google Plus Icon" />
+        </div>
+        <div class="icon-container">
+          <img src="./images/pintrest-icon-small.jpg" alt="Pineterest Icon" />
+        </div>
+      </div>
+    </footer>
+    <div id="modal-container" class="modal-container">
+      <div class="modal">
+        <h1>One Handsome Fella!</h1>
+        <div class="modal-image-container">
+          <img
+            src="./images/gallery/gallery-image-1.jpg"
+            alt=""
+            class="modal-image"
+          />
+        </div>
+        <h2>Looking Sharp</h2>
+        <p>
+          Sustainable bitters farm-to-table, deep v paleo mixtape dreamcatcher
+          gastropub gochujang. Portland subway tile retro squid iPhone.
+          Distillery flannel twee thundercats.
+        </p>
+        <button class="close-modal">CLOSE</button>
+      </div>
+    </div>
+  </body>
+</html>

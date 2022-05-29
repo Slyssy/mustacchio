@@ -1,4 +1,4 @@
-/* ! CSS Reset Section from joshwcomeau.com/css/custom-css-reset */
+/* ! CSS Reset Section */
 * {
   margin: 0;
   padding: 0;
@@ -40,7 +40,7 @@ footer > p {
 }
 
 h1 {
-  font-family: 'Poller One';
+  font-family: 'Poller One', cursive;
   font-size: 20px;
   text-align: center;
   background-color: var(--eerie-black);
@@ -177,6 +177,7 @@ p {
   header {
     height: 200px;
   }
+
   footer {
     width: 100vw;
     display: grid;
