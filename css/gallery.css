@@ -82,6 +82,22 @@ main {
   border-radius: 10px;
 }
 
+.close-icon {
+  width: 16px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.close-icon:hover {
+  width: 18px;
+  transition: width ease-in-out 0.2s;
+}
+
+.close-icon:active {
+  width: 16px;
+}
 .gallery-slot {
   width: auto;
 }

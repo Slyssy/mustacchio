@@ -3,8 +3,9 @@ const navbarLinks = document.querySelector('.navbar-links');
 
 const thumbNail = document.querySelectorAll('.image-links');
 const modalContainer = document.querySelector('#modal-container');
-const close = document.querySelector('.close-modal');
+const closeButton = document.querySelector('.close-modal');
 const modalImage = document.querySelector('.modal-image');
+const closeIcon = document.querySelector('.close-icon');
 
 //% Navbar toggle button event listener
 toggleButton.addEventListener('click', (e) => {
@@ -24,6 +25,10 @@ thumbNail.forEach((image) => {
   });
 });
 
-close.addEventListener('click', (event) => {
+closeButton.addEventListener('click', (event) => {
+  modalContainer.classList.remove('show');
+});
+
+closeIcon.addEventListener('click', (event) => {
   modalContainer.classList.remove('show');
 });
