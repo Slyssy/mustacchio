@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap"
       rel="stylesheet"
     />
-    <script src="./scripts/about.js" defer></script>
+    <script src="./scripts/blog.js" defer></script>
   </head>
   <body>
     <div class="page-container">
@@ -46,12 +46,14 @@
       </header>
       <h1 class="title">Blog</h1>
       <article class="blog-container">
-        <img
-          src="./images/blog/blog-1.jpg"
-          alt="Old man with young male
+        <div id="blog-1" class="blog-image-link">
+          <img
+            src="./images/blog/blog-1.jpg"
+            alt="Old man with young male
           barber"
-          class="blog-image"
-        />
+            class="blog-image"
+          />
+        </div>
         <div class="blog-text">
           <h2>Why I grew a mustache</h2>
           <p>
@@ -59,15 +61,17 @@
             Kitsch man braid flannel, yuccie craft beer cliche palo santo
             tumeric meh try-hard.
           </p>
-          <button>Read This</button>
+          <button id="button-1" class="read-this">Read This</button>
         </div>
       </article>
       <article class="blog-container">
-        <img
-          src="./images/blog/blog-2.jpg"
-          alt="Two guys with mustaches"
-          class="blog-image"
-        />
+        <div id="blog-2" class="blog-image-link">
+          <img
+            src="./images/blog/blog-2.jpg"
+            alt="Two guys with mustaches"
+            class="blog-image"
+          />
+        </div>
         <div class="blog-text">
           <h2>The Mustache Brothers</h2>
           <p>
@@ -75,16 +79,18 @@
             raclette chicharrones cornhole ennui activated charcoal sustainable
             flexitarian.
           </p>
-          <button>Read This</button>
+          <button id="button-2" class="read-this">Read This</button>
         </div>
       </article>
       <article class="blog-container">
-        <img
-          src="./images/blog/blog-3.jpg"
-          alt="Old man with young male
+        <div id="blog-3" class="blog-image-link">
+          <img
+            src="./images/blog/blog-3.jpg"
+            alt="Old man with young male
           barber"
-          class="blog-image"
-        />
+            class="blog-image"
+          />
+        </div>
         <div class="blog-text">
           <h2>In the Country</h2>
           <p>
@@ -92,7 +98,7 @@
             XOXO woke forage mumblecore. Church-key tumeric ethical post-ironic
             fashion axe.
           </p>
-          <button>Read This</button>
+          <button id="button-3" class="read-this">Read This</button>
         </div>
       </article>
     </div>
@@ -113,5 +119,50 @@
         </div>
       </div>
     </footer>
+    <div id="modal-container" class="modal-container">
+      <div class="modal">
+        <img src="./images/close.png" alt="close icon" class="close-icon" />
+        <h1>Blog Single Post</h1>
+        <div class="modal-image-container">
+          <img
+            src="./images/blog/blog-1.jpg"
+            alt=""
+            class="modal-image modal-image-1"
+          />
+          <img
+            src="./images/blog/blog-1-2.jpg"
+            alt="Barber Cutting Old Man's Hair"
+            class="modal-image modal-image-2"
+          />
+        </div>
+        <h2>Why I Grew a Mustache</h2>
+        <div class="modal-paragraphs">
+        <p>
+          Sustainable bitters farm-to-table, deep v paleo mixtape dreamcatcher
+          gastropub gochujang. Portland subway tile retro squid iPhone.
+          Distillery flannel twee thundercats. PBR&B celiac umami palo santo
+          polaroid tonx chillwave. Poke thundercats before they sold out
+          live-edge cold-pressed edison bulb biodiesel hashtag +1 glossier lyft.
+        </p>
+        <p>
+          Mustache street art stumptown, wolf gastropub air plant knausgaard
+          hella vice kogi butcher. Adaptogen sustainable tumeric narwhal hexagon
+          heirloom. Vape offal poke paleo vegan bitters scenester swag selfies
+          synth truffaut chartreuse narwhal echo park selvage. Drinking vinegar
+          XOXO raw denim yes plz occupy church-key, migas heirloom flannel
+          praxis live-edge squid.
+        </p>
+        <p>
+          Unicorn next level fingerstache cred viral trust fund, gochujang
+          scenester echo park quinoa pop-up. Post-ironic pok pok tilde, PBR&B
+          try-hard shabby chic prism +1 gentrify single-origin coffee sriracha
+          craft beer typewriter seitan. Skateboard copper mug jianbing cliche
+          brunch chicharrones lumbersexual letterpress typewriter vexillologist.
+          Chillwave raw denim man braid quinoa, try-hard flannel dreamcatcher
+          lo-fi.
+        </p>
+      </div>
+        <button class="close-modal">CLOSE</button>
+    </div>
   </body>
 </html>

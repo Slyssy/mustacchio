@@ -67,3 +67,6 @@ Photo 137433518 / Barbershop © Volodymyr Tverdokhlib | Dreamstime.com
 
 Blog 3 Image
 Photo 16431533 © Ramzi Hachicho | Dreamstime.com
+
+Blog 1 Image 2
+Photo 99030591 / Barbershop © Nejron | Dreamstime.com

@@ -16,7 +16,7 @@
 /* %Elements */
 article {
   width: 90%;
-  height: 600px;
+  height: auto;
   border: 2px solid var(--eerie-black);
   display: flex;
   flex-direction: column;
@@ -122,12 +122,36 @@ html {
   filter: grayscale();
 }
 
+.blog-image-link {
+  width: 100%;
+}
+
 .blog-text {
-  height: 100%;
+  height: auto;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  gap: 1em;
+  padding-top: 1em;
+}
+
+.close-icon {
+  width: 16px;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.close-icon:hover {
+  width: 18px;
+  transition: width ease-in-out 0.2s;
+}
+
+.close-icon:active {
+  width: 16px;
 }
 
 .icons-container {
@@ -140,6 +164,87 @@ html {
 
 .logo {
   width: 80%;
+}
+
+.modal {
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+}
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  max-width: 1200px;
+  background-color: white;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  transition: all ease-out 0.5s;
+  overflow: auto;
+}
+
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+  background: rgba(257, 257, 257, 0.7);
+  backdrop-filter: saturate(200%) blur(10px);
+  animation: fadein 0.5s;
+}
+
+.modal-paragraphs {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-image {
+  height: 100px;
+  object-fit: cover;
+}
+
+.modal-image-1 {
+  flex-grow: 2;
+}
+
+.modal-image-container {
+  width: 90%;
+  display: flex;
+}
+
+.modal h1 {
+  margin-top: 2.5em;
+}
+
+.modal h2 {
+  margin-top: 2em;
+  font-family: 'Poller One', cursive;
+  font-size: 16px;
+}
+
+.modal p {
+  text-align: center;
+  padding: 0 2em;
+  opacity: 0.7;
+  font-weight: 600;
 }
 
 .navbar {
@@ -235,6 +340,25 @@ html {
   .blog-text {
     height: 250px;
   }
+
+  .modal {
+    height: 95%;
+  }
+  .modal h1 {
+    font-size: 1.6em;
+  }
+
+  .modal h2 {
+    font-size: 1.4em;
+  }
+
+  .modal-image {
+    height: 200px;
+  }
+
+  .modal-paragraphs {
+    font-size: 1.2em;
+  }
   .navbar {
     display: flex;
     justify-content: space-around;
@@ -312,7 +436,38 @@ html {
     /* width: 30%; */
   }
 
+  h2 {
+    font-size: 34px;
+  }
   .blog-image {
-    width: 40%;
+    width: 90%;
+  }
+
+  .blog-image-link {
+    width: 100%;
+  }
+
+  .modal-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90vh;
+    width: 70vw;
+  }
+
+  .modal-image {
+    height: 100%;
+  }
+
+  .modal-image-1 {
+    flex-grow: 3;
+  }
+
+  .modal-image-2 {
+    flex-grow: 2;
+  }
+
+  .modal-image-container {
+    height: 30%;
   }
 }
