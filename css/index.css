@@ -41,13 +41,13 @@ footer > p {
 }
 
 h2 {
-  font-family: 'Poller One';
+  font-family: 'Poller One', cursive;
   text-align: center;
   padding-top: 15px;
 }
 
 h3 {
-  font-family: 'Poller One';
+  font-family: 'Poller One', cursive;
   font-size: 14px;
   background-color: white;
   width: fit-content;

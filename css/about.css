@@ -40,7 +40,7 @@ footer > p {
 }
 
 h1 {
-  font-family: 'Poller One';
+  font-family: 'Poller One', cursive;
   font-size: 20px;
   text-align: center;
   background-color: var(--eerie-black);
