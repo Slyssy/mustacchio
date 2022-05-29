@@ -22,13 +22,16 @@ function selectModalImage(num) {
 thumbNail.forEach((image) => {
   image.addEventListener('click', (event) => {
     modalContainer.classList.add('show');
+    toggleButton.classList.add('hide');
   });
 });
 
 closeButton.addEventListener('click', (event) => {
   modalContainer.classList.remove('show');
+  toggleButton.classList.remove('hide');
 });
 
 closeIcon.addEventListener('click', (event) => {
   modalContainer.classList.remove('show');
+  toggleButton.classList.remove('hide');
 });
