@@ -74,25 +74,3 @@ closeIcon3.addEventListener('click', (event) => {
   modalContainer3.classList.remove('show');
   toggleButton.classList.remove('hide');
 });
-// //% Function to select Image for Modal
-// function selectModalImage(num) {
-//   const thumb = `./images/gallery/gallery-image-${num}.jpg`;
-//   modalImage.src = thumb;
-// }
-
-// thumbNail.forEach((image) => {
-//   image.addEventListener('click', (event) => {
-//     modalContainer.classList.add('show');
-//     toggleButton.classList.add('hide');
-//   });
-// });
-
-// closeButton.addEventListener('click', (event) => {
-//   modalContainer.classList.remove('show');
-//   toggleButton.classList.remove('hide');
-// });
-
-// closeIcon.addEventListener('click', (event) => {
-//   modalContainer.classList.remove('show');
-//   toggleButton.classList.remove('hide');
-// });
