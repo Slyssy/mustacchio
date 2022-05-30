@@ -37,13 +37,15 @@ button,
   margin: 0 auto;
 }
 
-button:hover {
+button:hover,
+#contact-submit:hover {
   background-color: white;
   color: var(--teal);
   padding: 1.2em;
 }
 
-button:active {
+button:active,
+#contact-submit:active {
   padding: 1em;
   background-color: rgba(11, 163, 155, 0.501);
   color: white;
@@ -54,6 +56,9 @@ button a {
   color: white;
 }
 
+.go-back a:hover {
+  color: var(--teal);
+}
 button a:visited {
   color: white;
 }
@@ -125,6 +130,8 @@ textarea {
 }
 
 #results {
+  width: 80%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -132,6 +139,8 @@ textarea {
   gap: 1em;
   padding: 1em;
   text-align: center;
+  border: 2px solid var(--eerie-black);
+  overflow-wrap: break-word;
 }
 
 /* .result-info {
@@ -142,6 +151,10 @@ textarea {
 
 .result-info :nth-child(1) {
   font-weight: bold;
+}
+
+.result-info :nth-child(2) {
+  width: 250px;
 }
 
 .bar {
@@ -344,6 +357,10 @@ textarea {
     width: 80%;
     height: 100vh;
     justify-content: space-between;
+  }
+
+  .result-info :nth-child(2) {
+    width: 500px;
   }
 
   .toggle-button {
