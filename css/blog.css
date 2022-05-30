@@ -1,4 +1,4 @@
-/* ! CSS Reset Section from joshwcomeau.com/css/custom-css-reset */
+/* ! CSS Reset Section */
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +14,21 @@
 
 /* !Page Styling */
 /* %Elements */
+article {
+  width: 90%;
+  height: auto;
+  border: 2px solid var(--eerie-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article p {
+  padding: 0 1em;
+  text-align: center;
+  line-height: 1.6em;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   width: 100vw;
@@ -32,6 +47,7 @@ button {
   box-shadow: 0 100px 10px rbga(255, 255, 255, 0.8);
   transition: all ease-in-out 0.2s;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 button:hover {
@@ -46,26 +62,6 @@ button:active {
   color: white;
 }
 
-h1 {
-  font-family: 'Poller One', cursive;
-  font-size: 20px;
-  text-align: center;
-  background-color: var(--eerie-black);
-  color: white;
-  padding: 0.5em 1em;
-  text-transform: uppercase;
-}
-
-header {
-  margin-top: 16px;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
-}
-
 footer {
   width: 100%;
   background-color: var(--eerie-black);
@@ -78,14 +74,37 @@ footer > p {
   text-align: center;
 }
 
-main {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 160px;
-  justify-items: center;
+h1 {
+  width: 90%;
+  font-family: 'Poller One', cursive;
+  font-size: 18px;
+  text-align: center;
+  background-color: var(--eerie-black);
+  color: white;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: uppercase;
+  padding: 0 3em;
+  text-align: center;
+  font-weight: bolder;
+}
+
+header {
+  margin-top: 16px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  row-gap: 1em;
+  z-index: 1;
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 /* %Classes */
@@ -96,11 +115,36 @@ main {
   border-radius: 10px;
 }
 
+.blog-image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale();
+}
+
+.blog-image:hover {
+  cursor: pointer;
+}
+.blog-image-link {
+  width: 100%;
+}
+
+.blog-text {
+  height: auto;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1em;
+  padding-top: 1em;
+}
+
 .close-icon {
   width: 16px;
   position: fixed;
-  top: 15px;
-  right: 15px;
+  top: 25px;
+  right: 25px;
   cursor: pointer;
 }
 
@@ -113,14 +157,9 @@ main {
   width: 16px;
 }
 
-.gallery-slot {
-  width: auto;
+.close-modal {
+  margin-bottom: 1em;
 }
-
-.hide {
-  opacity: 0;
-}
-
 .icons-container {
   width: 100%;
   display: flex;
@@ -129,32 +168,15 @@ main {
   align-items: center;
 }
 
-.image-links {
-  width: 40vw;
-  max-width: 198px;
-  /* height: 160px; */
-  object-fit: cover;
-  filter: grayscale();
-  border: 2px solid var(--eerie-black);
-  transition: filter 0.4s ease-in-out;
-}
-
-.image-links:hover {
-  filter: none;
-  cursor: pointer;
-}
-
-.intro {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
+.logo {
+  width: 80%;
 }
 
 .modal {
+  height: 95%;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
   align-items: center;
 }
 
@@ -167,11 +189,13 @@ main {
   left: 0;
   height: 100vh;
   width: 100vw;
+  max-width: 1200px;
   background-color: white;
   opacity: 0;
   pointer-events: none;
   z-index: 2;
   transition: all ease-out 0.5s;
+  overflow: auto;
 }
 
 .modal-container.show {
@@ -180,6 +204,13 @@ main {
   background: rgba(257, 257, 257, 0.7);
   backdrop-filter: saturate(200%) blur(10px);
   animation: fadein 0.5s;
+}
+
+.modal-paragraphs {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 @keyframes fadein {
@@ -192,12 +223,29 @@ main {
 }
 
 .modal-image {
-  height: 250px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.modal-image-1 {
+  flex-grow: 2;
+}
+
+.modal-image-container {
+  width: 90%;
+  display: flex;
+}
+
+.modal h1 {
+  margin-top: 2.5em;
 }
 
 .modal h2 {
+  margin-top: 2em;
   font-family: 'Poller One', cursive;
+  font-size: 16px;
 }
+
 .modal p {
   text-align: center;
   padding: 0 2em;
@@ -272,10 +320,8 @@ main {
 
 /*! Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  h1 {
-    width: 89%;
-    margin: 0 auto;
-    font-size: 28px;
+  article {
+    height: auto;
   }
 
   header {
@@ -289,28 +335,44 @@ main {
     align-items: center;
   }
 
-  main {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(4, 200px);
+  p {
+    font-size: 1.1em;
   }
 
-  .image-links {
-    width: 25vw;
-    max-width: 216px;
+  .blog-image {
+    height: 350px;
+  }
+
+  .blog-text {
+    height: 250px;
+  }
+
+  .modal {
+    height: 95%;
+  }
+  .modal h1 {
+    font-size: 1.6em;
+  }
+
+  .modal h2 {
+    font-size: 1.4em;
   }
 
   .modal-container {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 70vh;
-    width: 70vw;
+    max-width: 800px;
+    height: 90vh;
   }
 
   .modal-image {
-    height: 450px;
+    height: 200px;
   }
 
+  .modal-paragraphs {
+    font-size: 1.2em;
+  }
   .navbar {
     display: flex;
     justify-content: space-around;
@@ -365,13 +427,11 @@ main {
   .navbar-links li:hover:after {
     width: 100%;
     left: 0;
-    cursor: pointer;
   }
   .navbar-links li a:hover {
     transition: all 0.3s ease;
     font-size: 1.3rem;
     color: var(--teal);
-    cursor: pointer;
   }
 
   .page-container {
@@ -382,35 +442,48 @@ main {
     display: none;
   }
 }
-
 /*! Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  main {
-    max-width: 1200px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(4, auto);
+  article {
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 30%; */
   }
 
-  .image-links {
-    width: 20vw;
-    max-width: 384px;
-    /* height: 240px; */
+  h2 {
+    font-size: 34px;
+  }
+  .blog-image {
+    width: 90%;
+  }
+
+  .blog-image-link {
+    width: 100%;
   }
 
   .modal-container {
-    height: 80vh;
-    width: 80vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90vh;
+    width: 70vw;
+    max-width: 1100px;
+    min-width: 930px;
   }
 
   .modal-image {
-    height: 650px;
+    height: 100%;
   }
 
-  .modal h2 {
-    font-size: 2em;
+  .modal-image-1 {
+    flex-grow: 3;
   }
-  .modal p {
-    font-size: 1.2em;
-    line-height: 1.9;
+
+  .modal-image-2 {
+    flex-grow: 2;
+  }
+
+  .modal-image-container {
+    height: 20%;
   }
 }
