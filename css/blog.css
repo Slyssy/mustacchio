@@ -120,10 +120,12 @@ html {
   width: 100%;
   object-fit: cover;
   filter: grayscale();
+  transition: filter 0.4s ease-in-out;
 }
 
 .blog-image:hover {
   cursor: pointer;
+  filter: none;
 }
 .blog-image-link {
   width: 100%;
