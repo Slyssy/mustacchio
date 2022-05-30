@@ -70,3 +70,9 @@ Photo 16431533 © Ramzi Hachicho | Dreamstime.com
 
 Blog 1 Image 2
 Photo 99030591 / Barbershop © Nejron | Dreamstime.com
+
+Blog 2 Image 2
+Photo 140668261 / Barbershop © Photosvit | Dreamstime.com
+
+Blog 3 Image 2
+Photo 54829670 © Pojoslaw | Dreamstime.com

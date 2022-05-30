@@ -122,6 +122,9 @@ html {
   filter: grayscale();
 }
 
+.blog-image:hover {
+  cursor: pointer;
+}
 .blog-image-link {
   width: 100%;
 }
@@ -154,6 +157,9 @@ html {
   width: 16px;
 }
 
+.close-modal {
+  margin-bottom: 1em;
+}
 .icons-container {
   width: 100%;
   display: flex;
@@ -352,6 +358,14 @@ html {
     font-size: 1.4em;
   }
 
+  .modal-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    height: 90vh;
+  }
+
   .modal-image {
     height: 200px;
   }
@@ -453,6 +467,8 @@ html {
     transform: translate(-50%, -50%);
     height: 90vh;
     width: 70vw;
+    max-width: 1100px;
+    min-width: 930px;
   }
 
   .modal-image {
@@ -468,6 +484,6 @@ html {
   }
 
   .modal-image-container {
-    height: 30%;
+    height: 20%;
   }
 }
