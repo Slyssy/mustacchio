@@ -186,6 +186,7 @@ section {
   gap: 20px;
   align-items: center;
   background-color: white;
+  max-width: 1300px;
 }
 
 .read-more {
