@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Mustacchio</title>
+    <title>Contact Results</title>
     <link rel="stylesheet" href="./css/contact.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap"
       rel="stylesheet"
     />
-    <script src="./scripts/contact.js" defer></script>
+    <script src="./scripts/contact-results.js" defer></script>
   </head>
   <body>
     <div class="page-container">
@@ -48,31 +48,11 @@
           </div>
         </nav>
       </header>
-      <h1 class="title">Let's Keep in Touch</h1>
-      <form
-        action="./contact-results.html"
-        method="get"
-        enctype="multipart/form-data"
-      >
-        <input type="text" id="name" name="NAME" placeholder="NAME" required />
-        <input type="text" id="address" name="ADDRESS" placeholder="ADDRESS" />
-        <input
-          type="email"
-          id="email"
-          name="EMAIL"
-          placeholder="EMAIL"
-          required
-        />
-        <input type="text" id="phone" name="PHONE" placeholder="PHONE" />
-        <textarea
-          name="MESSAGE"
-          id="message"
-          cols="30"
-          rows="15"
-          placeholder="MESSAGE"
-          required
-        ></textarea>
-        <input type="submit" id="contact-submit" />
+      <h1 class="title">Contact Results</h1>
+      <div id="results"></div>
+      <button class="go-back" href="/">
+        <a href="./contact.html">Go Back</a>
+      </button>
       </form>
       <footer>
         <p>&#169; 2022 by Stevio. All rights reserved.</p>
